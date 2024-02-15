@@ -125,7 +125,7 @@ RSpec.describe DataDeliveryService::InformationAggregator do
     subject(:service) { described_class.new(params, datasets) }
 
     context 'when hotel information are present' do
-      let(:params) { { destination_id: 5432 } }
+      let(:params) { { destination: 5432 } }
 
       it 'returns merged and processed data' do
         result = service.call
@@ -173,7 +173,7 @@ RSpec.describe DataDeliveryService::InformationAggregator do
     end
 
     context 'when query invalid value' do
-      let(:params) { { hotel_ids: ['0'] } }
+      let(:params) { { hotels: ['0'] } }
 
       it 'returns an empty array' do
         result = service.call

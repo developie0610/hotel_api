@@ -14,7 +14,7 @@ module Api
       private
 
       def index_params
-        params.permit(:destination_id, hotel_ids: [])
+        params.permit(:destination, hotels: [])
       end
 
       def render_error(exception)

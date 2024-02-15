@@ -23,11 +23,11 @@ module DataDeliveryService
     attr_reader :params, :datasets
 
     def hotel_ids
-      @params[:hotel_ids]
+      @params[:hotels]
     end
 
     def destination_id
-      @params[:destination_id]
+      @params[:destination]
     end
 
     def filter_by_hotel_ids
