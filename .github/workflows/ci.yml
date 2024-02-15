@@ -1,9 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -19,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '3.x' # Change this to match your Ruby version
+          ruby-version: '3.3.0'
 
       - name: Install dependencies
         run: |
@@ -31,3 +28,6 @@ jobs:
 
       - name: Run RuboCop
         run: bundle exec rubocop --format simple --fail-level warning
+
+      - name: Generate Swagger Documentation
+        run: bundle exec rake rswag:specs:swaggerize
