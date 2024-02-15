@@ -40,9 +40,6 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop --format simple --fail-level warning
 
-      - name: Generate Swagger Documentation
-        run: bundle exec rake rswag:specs:swaggerize
-
       - name: Setup DB, Run RSpec
         env:
           PGHOST: postgres
