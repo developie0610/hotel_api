@@ -1,0 +1,1288 @@
+Started GET "/" for 127.0.0.1 at 2024-02-14 20:51:20 +0700
+  
+ActiveRecord::NoDatabaseError (We could not find your database: hotel_api_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-02-14 20:51:26 +0700
+  
+ActiveRecord::NoDatabaseError (We could not find your database: hotel_api_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-02-14 20:51:26 +0700
+  
+ActiveRecord::NoDatabaseError (We could not find your database: hotel_api_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-02-14 21:10:39 +0700
+  
+ActiveRecord::NoDatabaseError (We could not find your database: hotel_api_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2024-02-14 21:10:39 +0700
+  
+ActiveRecord::NoDatabaseError (We could not find your database: hotel_api_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (176.8ms)[0m  [1m[35mCREATE DATABASE "hotel_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (129.2ms)[0m  [1m[35mCREATE DATABASE "hotel_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2024-02-14 21:11:45 +0700
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 374)
+Completed 200 OK in 19ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 4807)
+
+
+Started GET "/hotels" for ::1 at 2024-02-14 21:11:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/hotels"):
+  
+Started GET "/favicon.ico" for ::1 at 2024-02-14 21:11:51 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/hotels" for ::1 at 2024-02-14 21:12:09 +0700
+Processing by Api::V1::HotelsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/api/v1/hotels?hotels_id=[%22iJhz%22]" for ::1 at 2024-02-14 21:12:35 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"hotels_id"=>"[\"iJhz\"]"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 66)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 21:14:36 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1123)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 21:14:54 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+  
+NoMethodError (undefined method `pry' for an instance of Binding):
+  
+app/controllers/api/v1/hotels_controller.rb:6:in `index'
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 21:15:26 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 200 OK in 62480ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 29608)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 21:43:51 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 200 OK in 723344ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 892254)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 21:56:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 200 OK in 346162ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 636307)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 22:02:11 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 22:46:26 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Completed 200 OK in 10846ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 73526)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 22:50:46 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz"]}
+Started GET "/api/v1/hotels?hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 22:56:03 +0700
+Completed 200 OK in 321740ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 94079)
+
+
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["iJhz"]}
+Started GET "/api/v1/hotels?hotel_ids[]=iJhz" for 127.0.0.1 at 2024-02-14 22:57:49 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["iJhz"]}
+Completed 200 OK in 322429ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 738087)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-14 23:03:48 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 17416ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 8739)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-14 23:21:55 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 11505ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 11534)
+
+
+Started GET "/api/v1/hotels?destination_id=4321" for 127.0.0.1 at 2024-02-14 23:23:21 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"4321"}
+Completed 200 OK in 6479ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 7381)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:23:33 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 3546ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 7369)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:24:05 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 44298ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 103334)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:24:52 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 9267ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 19738)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:25:05 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 27504ms (ActiveRecord: 0.0ms | Allocations: 146126)
+
+
+  
+NoMethodError (undefined method `keys' for an instance of String):
+  
+app/services/data_sorter.rb:9:in `block in sort_dataset'
+app/services/data_sorter.rb:8:in `each'
+app/services/data_sorter.rb:8:in `sort_by'
+app/services/data_sorter.rb:8:in `sort_dataset'
+app/services/hotel_filter.rb:18:in `block in filter_by_destination_id'
+app/services/hotel_filter.rb:17:in `each'
+app/services/hotel_filter.rb:17:in `map'
+app/services/hotel_filter.rb:17:in `filter_by_destination_id'
+app/controllers/api/v1/hotels_controller.rb:8:in `index'
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:25:39 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 9799ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 17401)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:34:50 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 7377ms (ActiveRecord: 0.0ms | Allocations: 8062)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/services/hotel_filter.rb:15:in `block in filter_by_destination_id'
+app/services/hotel_filter.rb:15:in `each'
+app/services/hotel_filter.rb:15:in `group_by'
+app/services/hotel_filter.rb:15:in `filter_by_destination_id'
+app/controllers/api/v1/hotels_controller.rb:8:in `index'
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:35:29 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 18660ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 69403)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-14 23:54:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2706)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 00:03:44 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 12826ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 7939)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 00:04:58 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 9716ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6865)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 00:05:17 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 226563ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 537853)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 00:09:28 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 59707ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 218875)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 00:11:11 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 6611ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 7165)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:11:44 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+[31mUnpermitted parameter: :hotel_ids. Context: { controller: Api::V1::HotelsController, action: index, request: #<ActionDispatch::Request:0x00000001254a4248>, params: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"], "controller"=>"api/v1/hotels", "action"=>"index"} }[0m
+Completed 500 Internal Server Error in 3887ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6885)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:12:51 +0700
+  
+SyntaxError (/Users/macbook/Documents/ruby/hotel_api/app/controllers/api/v1/hotels_controller.rb:17: syntax error, unexpected ')', expecting =>
+...hotel_ids: [], :destination_id)
+...                              ^
+):
+  
+app/controllers/api/v1/hotels_controller.rb:17: syntax error, unexpected ')', expecting =>
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:13:01 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 6586ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 7180)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:18:47 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4054)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:20:28 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 7895ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 10791)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:21:46 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 15539ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 10793)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:23:41 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 14852ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 10348)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:24:40 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 717)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 00:24:42 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 680)
+
+
+Started GET "/api/v1/hotels?destination_id=4321" for 127.0.0.1 at 2024-02-15 10:35:53 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"4321"}
+Completed 500 Internal Server Error in 4372ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6453)
+
+
+Started GET "/api/v1/hotels?destination_id=4321" for 127.0.0.1 at 2024-02-15 10:36:16 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"4321"}
+Completed 500 Internal Server Error in 20035ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 139753)
+
+
+Started GET "/api/v1/hotels?destination_id=4321" for 127.0.0.1 at 2024-02-15 10:39:45 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"4321"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 10:39:56 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 731)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 10:48:45 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1260)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 10:59:36 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 7188420ms (ActiveRecord: 0.0ms | Allocations: 332284)
+
+
+  
+LoadError (cannot load such file -- /Users/macbook/Documents/ruby/hotel_api/app/services/hotel/data_sorter.rb):
+  
+app/services/hotel/information_service.rb:41:in `block in merge_and_sort'
+app/services/hotel/information_service.rb:40:in `map'
+app/services/hotel/information_service.rb:40:in `merge_and_sort'
+app/services/hotel/information_service.rb:14:in `execute'
+app/controllers/api/v1/hotels_controller.rb:9:in `index'
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 12:59:29 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:00:30 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 162)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:00:52 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2439)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:01:15 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 7919ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:01:45 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 1236ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2098)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:01:57 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 6378ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 7404)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:02:13 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 418)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:02:40 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 777)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:03:08 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 8198ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 26370)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:03:44 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1157)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:03:54 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1151)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:04:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 866185ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 374296)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 13:18:43 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1515)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 13:19:45 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1366)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:42:44 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 9ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:43:00 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 7311ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4078)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:43:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:43:26 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1071)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:43:29 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1070)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:43:55 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 44842ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 290068)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:44:43 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 181371ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 480028)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:47:48 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 530)
+
+
+  
+SyntaxError (/Users/macbook/Documents/ruby/hotel_api/app/services/data_procuring_service/fetcher.rb:25: syntax error, unexpected '}', expecting =>
+...plier] = fetch_data(supplier) } }
+...                              ^
+/Users/macbook/Documents/ruby/hotel_api/app/services/data_procuring_service/fetcher.rb:35: syntax error, unexpected `end'):
+  
+app/services/data_procuring_service/fetcher.rb:25: syntax error, unexpected '}', expecting =>
+app/services/data_procuring_service/fetcher.rb:35: syntax error, unexpected `end'
+app/services/data_delivery_service/information_aggregator.rb:19:in `fetch_live_data'
+app/services/data_delivery_service/information_aggregator.rb:7:in `initialize'
+app/controllers/api/v1/hotels_controller.rb:9:in `new'
+app/controllers/api/v1/hotels_controller.rb:9:in `index'
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:48:24 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 104878ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 194302)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:50:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 30277ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 243024)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:50:49 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 52030ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 521352)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:51:46 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4553)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:52:11 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4228)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:53:08 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 25324ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 589796)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:55:13 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 8063ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 9927)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:55:41 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 11ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4268)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 15:56:22 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 4819)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:00:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4850)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:00:25 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3773)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:02:52 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4967)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:02:56 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3890)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:19:46 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4891)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:19:48 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3772)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:34:16 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 500 Internal Server Error in 8484ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6861)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:34:52 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5798)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:34:55 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4205)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:36:24 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1817)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:36:32 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 500 Internal Server Error in 68482ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 625538)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:37:44 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2869)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:38:03 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 5497)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:38:06 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 4086)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 16:38:38 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5448)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 16:38:40 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4196)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 17:24:31 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3885ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 10452)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 17:25:25 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4127)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 18:07:10 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4972)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:07:15 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:35:34 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3919ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 6216)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 18:35:43 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2293)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:36:05 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2405)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:38:11 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 3554)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:38:13 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2412)
+
+
+Started GET "/" for ::1 at 2024-02-15 18:39:24 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 372)
+Completed 200 OK in 40ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 4202)
+
+
+Started GET "/api/v1/hotels?hotels_id=[%22iJhz%22]" for ::1 at 2024-02-15 18:39:28 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"hotels_id"=>"[\"iJhz\"]"}
+[31mUnpermitted parameter: :hotels_id. Context: { controller: Api::V1::HotelsController, action: index, request: #<ActionDispatch::Request:0x0000000128aaab58>, params: {"hotels_id"=>"[\"iJhz\"]", "controller"=>"api/v1/hotels", "action"=>"index"} }[0m
+Completed 200 OK in 5354ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6048)
+
+
+Started GET "/favicon.ico" for ::1 at 2024-02-15 18:39:33 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/hotels?hotels_id[]=iJhz" for ::1 at 2024-02-15 18:39:43 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"hotels_id"=>["iJhz"]}
+[31mUnpermitted parameter: :hotels_id. Context: { controller: Api::V1::HotelsController, action: index, request: #<ActionDispatch::Request:0x0000000128de0520>, params: {"hotels_id"=>["iJhz"], "controller"=>"api/v1/hotels", "action"=>"index"} }[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2246)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX" for ::1 at 2024-02-15 18:40:05 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"hotel_ids"=>["SjyX"]}
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3519)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for ::1 at 2024-02-15 18:40:27 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2297)
+
+
+Started GET "/api-docs" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:40:35 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:41:13 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:42:53 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:42:54 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:42:54 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:42:54 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:42:54 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:42:54 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:43:46 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:44:23 +0700
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:44:47 +0700
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=iJhz%2C%20f8c9%2C%20SjyX" for ::1 at 2024-02-15 18:44:53 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["iJhz, f8c9, SjyX"]}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2125)
+
+
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=%5BiJhz%2Cf8c9%2CSjyX%5D" for ::1 at 2024-02-15 18:45:28 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["[iJhz,f8c9,SjyX]"]}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:48:32 +0700
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=hotel_ids%5BJhz%5D" for ::1 at 2024-02-15 18:51:16 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["hotel_ids[Jhz]"]}
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2127)
+
+
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=hotel_ids%5B%5D%3D%27abc%27" for ::1 at 2024-02-15 18:51:29 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["hotel_ids[]='abc'"]}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 18:51:42 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2300)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 18:52:18 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 18:52:27 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2413)
+
+
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=hotel_ids%5B%5D%3DSjyX%26hotel_ids%5B%5D%3DiJhz%26hotel_ids%5B%5D%3Df8c9" for ::1 at 2024-02-15 18:52:44 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9"]}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 18:54:24 +0700
+Started GET "/api/v1/hotels?destination_id=5432" for ::1 at 2024-02-15 18:54:32 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 19:08:06 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 19:08:06 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 19:08:06 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 19:08:06 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 19:08:07 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 19:08:07 +0700
+Started GET "/api/v1/hotels?hotel_ids%5B%5D=iJhz&hotel_ids%5B%5D=iJhz" for ::1 at 2024-02-15 19:08:35 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"hotel_ids"=>["iJhz", "iJhz"]}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2228)
+
+
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX&hotel_ids[]=iJhz&hotel_ids[]=f8c9" for 127.0.0.1 at 2024-02-15 19:50:44 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"hotel_ids"=>["SjyX", "iJhz", "f8c9"]}
+Completed 200 OK in 14914ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 6441)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for 127.0.0.1 at 2024-02-15 19:51:56 +0700
+Processing by Api::V1::HotelsController#index as */*
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2303)
+
+
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 20:01:41 +0700
+Started GET "/api/v1/hotels?destination_id=5432" for ::1 at 2024-02-15 20:01:51 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2324)
+
+
+Started GET "/api/v1/hotels?destination_id=5432&hotel_ids%5B%5D=iJhz" for ::1 at 2024-02-15 20:02:07 +0700
+Processing by Api::V1::HotelsController#index as JSON
+  Parameters: {"destination_id"=>"5432", "hotel_ids"=>["iJhz"]}
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2230)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-15 20:10:09 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macbook/.gem/ruby/3.3.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 372)
+Completed 200 OK in 65ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4201)
+
+
+Started GET "/api/v1/hotels" for 127.0.0.1 at 2024-02-15 20:10:16 +0700
+Processing by Api::V1::HotelsController#index as HTML
+Completed 200 OK in 7765ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5958)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-02-15 20:10:24 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/hotels?hotel_ids[]=SjyX" for ::1 at 2024-02-15 20:10:42 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"hotel_ids"=>["SjyX"]}
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3591)
+
+
+Started GET "/api/v1/hotels?destination_id=5432" for ::1 at 2024-02-15 20:10:45 +0700
+Processing by Api::V1::HotelsController#index as HTML
+  Parameters: {"destination_id"=>"5432"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2302)
+
+
+Started GET "/api-docs/index.html" for ::1 at 2024-02-15 20:11:05 +0700
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2024-02-15 20:11:05 +0700
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2024-02-15 20:11:05 +0700
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2024-02-15 20:11:05 +0700
+Started GET "/api-docs/v1/swagger.yaml" for ::1 at 2024-02-15 20:11:05 +0700
+Started GET "/api-docs/favicon-32x32.png" for ::1 at 2024-02-15 20:11:05 +0700
