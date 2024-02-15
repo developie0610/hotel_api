@@ -124,8 +124,8 @@ RSpec.describe 'Hotels API', type: :request do
       tags 'Hotels API'
       produces 'application/json'
 
-      parameter name: :destination_id, in: :query, type: :integer, description: 'Destination ID', required: false
-      parameter name: :'hotel_ids[]', in: :query, type: :array, items: { type: :string }, description: 'Hotel IDs', required: false
+      parameter name: :destination, in: :query, type: :integer, description: 'Destination ID', required: false
+      parameter name: :'hotels[]', in: :query, type: :array, items: { type: :string }, description: 'Hotel IDs', required: false
 
       response '200', 'Hotels found by destination ID' do
         schema type: :array,
@@ -185,7 +185,7 @@ RSpec.describe 'Hotels API', type: :request do
                  }
                }
 
-        let(:destination_id) { 5432 }
+        let(:destination) { 5432 }
 
         run_test!
       end
@@ -248,7 +248,7 @@ RSpec.describe 'Hotels API', type: :request do
                  }
                }
 
-        let(:'hotel_ids[]') { %w[SjyX iJhz] }
+        let(:'hotels[]') { %w[SjyX iJhz] }
 
         run_test!
       end
@@ -271,8 +271,8 @@ RSpec.describe 'Hotels API', type: :request do
       tags 'Hotels'
       produces 'application/json'
 
-      parameter name: :destination_id, in: :query, type: :integer, description: 'Destination ID', required: false
-      parameter name: :'hotel_ids[]', in: :query, type: :array, items: { type: :string }, description: 'Hotel IDs', required: false
+      parameter name: :destination, in: :query, type: :integer, description: 'Destination ID', required: false
+      parameter name: :'hotels[]', in: :query, type: :array, items: { type: :string }, description: 'Hotel IDs', required: false
 
       response '200', 'Hotels found by hotel IDs' do
         schema type: :array,
@@ -332,7 +332,7 @@ RSpec.describe 'Hotels API', type: :request do
                  }
                }
 
-        let(:'hotel_ids[]') { %w[SjyX iJhz] }
+        let(:'hotels[]') { %w[SjyX iJhz] }
 
         run_test!
       end

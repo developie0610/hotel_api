@@ -15,7 +15,7 @@ RSpec.describe DataDeliveryService::Filter do
     subject { described_class.new(params, datasets).call }
 
     context 'when filtering by hotel ids' do
-      let(:params) { { hotel_ids: [1, 2] } }
+      let(:params) { { hotels: [1, 2] } }
 
       it 'returns data filter by hotel ids and group by hotel ids' do
         expect(subject).to eq({ 1 => [{ id: 1, destination_id: 100, name: 'Hotel A' }],
@@ -24,7 +24,7 @@ RSpec.describe DataDeliveryService::Filter do
     end
 
     context 'when filtering by destination id' do
-      let(:params) { { destination_id: 100 } }
+      let(:params) { { destination: 100 } }
 
       it 'returns data filter by destination id and group by hotel ids' do
         expect(subject).to eq({ 1 => [{ id: 1, destination_id: 100, name: 'Hotel A' }],

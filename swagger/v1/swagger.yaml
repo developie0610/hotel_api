@@ -10,13 +10,13 @@ paths:
       tags:
       - Hotels
       parameters:
-      - name: destination_id
+      - name: destination
         in: query
         description: Destination ID
         required: false
         schema:
           type: integer
-      - name: hotel_ids[]
+      - name: hotels[]
         in: query
         items:
           type: string
