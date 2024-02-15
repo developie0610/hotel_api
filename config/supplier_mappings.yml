@@ -1,0 +1,34 @@
+acme:
+  id: 'Id'
+  destination_id: 'DestinationId'
+  name: 'Name'
+  location:
+    address: 'Address'
+    city: 'City'
+    country: 'Country'
+    lat: 'Latitude'
+    lng: 'Longitude'
+  description: 'Description'
+  amenities: 'Facilities'
+
+paperflies:
+  id: 'hotel_id'
+  destination_id: 'destination_id'
+  name: 'hotel_name'
+  location:
+    address: 'location.address'
+    country: 'location.country'
+  description: 'details'
+  amenities: 'amenities'
+  images: 'images'
+  booking_conditions: 'booking_conditions'
+
+patagonia:
+  id: 'id'
+  destination_id: 'destination'
+  name: 'name'
+  location:
+    address: 'address'
+  description: 'info'
+  amenities: 'amenities'
+  images: 'images'

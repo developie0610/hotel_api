@@ -1,0 +1,100 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/hotels":
+    get:
+      summary: Retrieves hotels by hotel IDs
+      tags:
+      - Hotels
+      parameters:
+      - name: destination_id
+        in: query
+        description: Destination ID
+        required: false
+        schema:
+          type: integer
+      - name: hotel_ids[]
+        in: query
+        items:
+          type: string
+        description: Hotel IDs
+        required: false
+        schema:
+          type: array
+      responses:
+        '200':
+          description: Hotels found by hotel IDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    destination_id:
+                      type: integer
+                    name:
+                      type: string
+                    location:
+                      type: object
+                      properties:
+                        address:
+                          type: string
+                        city:
+                          type: string
+                        country:
+                          type: string
+                        lat:
+                          type: number
+                        lng:
+                          type: number
+                    description:
+                      type: string
+                    amenities:
+                      type: object
+                      properties:
+                        general:
+                          type: array
+                          items:
+                            type: string
+                        room:
+                          type: array
+                          items:
+                            type: string
+                    images:
+                      type: object
+                      properties:
+                        rooms:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              link:
+                                type: string
+                              description:
+                                type: string
+                        site:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              link:
+                                type: string
+                              description:
+                                type: string
+                    booking_conditions:
+                      type: array
+                      items:
+                        type: string
+        '500':
+          description: internal server error
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
