@@ -9,6 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:10.8
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ""
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -17,15 +29,23 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3.0'
+          bundler-cache: true
 
       - name: Install dependencies
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
 
-      - name: Run RSpec
-        run: bundle exec rspec
-
+      - name: Setup DB, Run RSpec
+        env:
+          PGHOST: postgres
+          PGUSER: postgres
+          PGPORT: ${{ job.services.postgres.ports }}
+          RAILS_ENV: test
+        run: |
+          bin/rails db:create
+          bundle exec rspec
+    
       - name: Run RuboCop
         run: bundle exec rubocop --format simple --fail-level warning
 
