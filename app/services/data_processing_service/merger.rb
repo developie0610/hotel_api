@@ -3,7 +3,8 @@
 module DataProcessingService
   class Merger
     SINGLE_VALUE_KEYS = %i[id destination_id name location description].freeze
-    IMAGE_SORT_KEY = :description
+    IMAGE_SORT_KEY_PRIMARY = :link
+    IMAGE_SORT_KEY_SECONDARY = :description
 
     # Initializes the Merger with datasets.
     #
@@ -33,11 +34,11 @@ module DataProcessingService
 
     def combine_images
       images = combine_data(:images, :hash)
-      images.transform_values { |images| images.sort_by { |image| image[IMAGE_SORT_KEY] } }
+      images.transform_values { |collection| sort_images(collection) }
     end
 
     def sort_images(image_collection)
-      image_collection.sort_by { |image| image[IMAGE_SORT_KEY] }
+      image_collection.sort_by { |item| [item[IMAGE_SORT_KEY_PRIMARY], item[IMAGE_SORT_KEY_SECONDARY]] }
     end
 
     def combine_data(key, data_type = :hash)
