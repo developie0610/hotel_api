@@ -14,7 +14,7 @@ jobs:
         image: postgres:10.8
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: ''
           POSTGRES_HOST_AUTH_METHOD: trust
           POSTGRES_DB: postgres
         ports:
@@ -36,18 +36,19 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
 
-      - name: Setup DB, Run RSpec
-        env:
-          PGHOST: postgres
-          PGUSER: postgres
-          PGPORT: ${{ job.services.postgres.ports }}
-          RAILS_ENV: test
-        run: |
-          bin/rails db:create
-          bundle exec rspec
     
       - name: Run RuboCop
         run: bundle exec rubocop --format simple --fail-level warning
 
       - name: Generate Swagger Documentation
         run: bundle exec rake rswag:specs:swaggerize
+
+      - name: Setup DB, Run RSpec
+        env:
+          PGHOST: postgres
+          PGUSER: postgres
+          PGPORT: 5432
+          RAILS_ENV: test
+        run: |
+          bin/rails db:create
+          bundle exec rspec
